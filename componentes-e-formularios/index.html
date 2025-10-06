@@ -3,26 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Componentes e Formulários - Exemplo</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Componente de Aulas</title>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Formulário de Nota</h1>
-        <form>
-            <label for="notaInput">Nota:</label>
-            <input type="number" id="notaInput" min="0" max="10" step="0.1" placeholder="Digite a nota...">
-        </form>
-        
-        <div class="resultado">
-            <h2>Nota Atual:</h2>
-            <div id="label-nota" class="label-nota">
-                <span id="valor-nota">--</span>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <aulas-component id="componente"></aulas-component>
+    
+    <script src="script_componente.js"></script>
 </body>
 </html>

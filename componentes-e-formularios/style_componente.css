@@ -1,0 +1,77 @@
+:root 
+{
+  /* Define variáveis de cor para manter a consistência. */
+  --frequencia: #126ae2;
+  --nota: #126ae2;
+  --prova: #d9534f; /* Cor de destaque para o alerta de prova. */
+}
+
+body 
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 20px;
+}
+
+.comp-aula 
+{
+    border: 1px solid #ccc;       /* Borda cinza clara. */
+    padding: 15px;                  /* Espaçamento interno. */
+    margin-bottom: 15px;            /* Espaçamento externo inferior (entre os cards). */
+    border-radius: 8px;             /* Bordas arredondadas. */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil para dar profundidade. */
+    max-width: 350px;               /* Largura máxima do card. */
+}
+
+/* Estiliza o título da disciplina. */
+.titulo_aula 
+{
+    font-weight: bold;              /* Texto em negrito. */
+    font-size: 15px;                /* Tamanho da fonte. */
+    padding: 5px;                   /* Pequeno espaçamento interno. */
+    white-space: nowrap;            /* Impede que o texto quebre em várias linhas. */
+    overflow: hidden;               /* Esconde o texto que ultrapassar a largura do elemento. */
+    text-overflow: ellipsis;        /* Adiciona "..." ao final do texto que foi cortado. */
+    margin-bottom: 5px;             /* Espaçamento inferior. */
+}
+  
+/* Estiliza o contêiner que agrupa os "labels" (nota, frequência). */
+.lables 
+{
+    display: flex;                  /* Usa Flexbox para alinhar os itens horizontalmente. */
+    flex-wrap: wrap;                /* Permite que os itens quebrem para a linha de baixo se não houver espaço. */
+}
+  
+/* Estilo base compartilhado por todos os "labels" (as pílulas coloridas). */
+.lable-prova,
+.lable-frequencia,
+.lable-nota 
+{
+    background-color: var(--prova); /* Cor de fundo padrão (usando a variável). */
+    padding: 7px 15px;              /* Espaçamento interno (vertical e horizontal). */
+    margin-bottom: 10px;            /* Espaçamento inferior. */
+    border-radius: 500px;           /* Bordas muito arredondadas para criar o formato de pílula. */
+    text-align: center;             /* Centraliza o texto. */
+    margin-right: 10px;             /* Espaçamento à direita (entre as pílulas). */
+}
+  
+/* Sobrescreve a cor de fundo especificamente para o label de frequência. */
+.lable-frequencia 
+{
+    background-color: var(--frequencia); /* Usa a variável --frequencia. */
+}
+  
+/* Sobrescreve a cor de fundo para o label de nota. (Nota: esta cor será sobrescrita pelo estilo inline do JS). */
+.lable-nota 
+{
+    background-color: var(--nota); /* Usa a variável --nota. */
+}
+  
+/* Estiliza o texto dentro dos labels. */
+.p_lable 
+{
+    font-size: 13px;                /* Tamanho da fonte. */
+    color: white;                 /* Cor do texto. */
+    white-space: nowrap;            /* Impede a quebra de linha. */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
